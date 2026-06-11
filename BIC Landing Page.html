@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Building Intelligence Center — AI-powered building performance software by NextSense</title>
+<meta name="description" content="The NextSense Building Intelligence Center (BIC) is a building performance software platform that combines agentic AI with expert human review to monitor, detect and resolve issues across your commercial real estate portfolio — before occupants notice." />
+<meta property="og:title" content="Building Intelligence Center — NextSense" />
+<meta property="og:description" content="AI-powered building performance software that monitors every system, catches issues early, and tells your team exactly what to do." />
+<link rel="icon" href="assets/next-sense-icon.svg" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="widgets.css" />
+</head>
+<body>
+<div class="grain-overlay" aria-hidden="true"></div>
+
+<!-- ============================ NAV ============================ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo" aria-label="NextSense home">
+      <img src="assets/logo-full.svg" alt="NextSense" />
+    </a>
+  </div>
+</nav>
+
+<!-- ============================ HERO ============================ -->
+<header class="hero" id="top" data-screen-label="Hero">
+  <div class="wrap hero-copy">
+    <span class="eyebrow reveal" style="display:inline-flex;">BIC Software for <span id="hero-role" style="margin-left:3px;">Operators</span></span>
+    <h1 class="display reveal d1">Talk to Your Building.<br />Get Insights. Take Action.</h1>
+    <p class="hero-lede reveal d2">The Building Intelligence Center pairs agentic AI with human experts to turn scattered building data into clear actions that improve <em>energy efficiency</em> and <em>comfort</em> across your portfolio.</p>
+    <div class="hero-cta reveal d3">
+      <a href="#cta" class="btn btn-light">Book a demo</a>
+      <a href="#solution" class="btn btn-ghost-light">See how it works
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="hero-visual reveal d4">
+      <img class="hero-visual-mask" src="uploads/Group 1000006980.svg" alt="The BIC interactive demo environment — ECM Tracker, AI Building Assistant and live energy widgets" />
+    </div>
+  </div>
+</header>
+
+<!-- ======================= LOGO BANNER ======================= -->
+<section class="logos">
+  <div class="wrap">
+    <p class="logos-label reveal">Trusted by leading real estate owners, corporates and operators</p>
+  </div>
+  <div class="logos-marquee" aria-hidden="true">
+    <div class="logos-track">
+      <span>Logo</span><span>Logo</span><span>Logo</span><span>Logo</span><span>Logo</span><span>Logo</span><span>Logo</span><span>Logo</span><span>Logo</span><span>Logo</span>
+      <span>Logo</span><span>Logo</span><span>Logo</span><span>Logo</span><span>Logo</span><span>Logo</span><span>Logo</span><span>Logo</span><span>Logo</span><span>Logo</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========================= PROBLEM ========================= -->
+<section class="problem section-pad" id="problem">
+  <div class="wrap">
+    <div class="problem-inner">
+      <span class="eyebrow reveal">The Problem</span>
+      <h2 class="h2 reveal d1">Complexity of building installations<br>and user demands are <span style="color:var(--digital-sun);">out of reach</span><br>for human execution.</h2>
+      <p class="problem-body reveal d2">Buildings generate lots of data, but it's scattered across different systems and vendors, hard to extract and nearly impossible to make sense of. Users of buildings have almost daily alternating demands. Teams can't catch up — instead they manage reactively, only finding out about issues when a complaint arrives or something breaks.</p>
+      <div class="problem-cards reveal d3">
+        <div class="prob-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
+          Data scattered across systems
+        </div>
+        <div class="prob-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+          Issues found only after complaints
+        </div>
+        <div class="prob-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Teams always reacting, never ahead
+        </div>
+        <div class="prob-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h.01"/><path d="M7 20v-4"/><path d="M12 20v-8"/><path d="M17 20V8"/><path d="M22 4v16"/></svg>
+          Insights locked in siloed dashboards
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== SOLUTION ======================== -->
+<section class="solution section-pad" id="solution">
+  <div class="wrap">
+    <div class="solution-head" style="text-align:center;max-width:none;">
+      <span class="eyebrow reveal">The Solution</span>
+      <h2 class="h2 reveal" style="margin-top:20px;">From scattered data to clear action<br>with agentic AI and human experts.</h2>
+      <p class="lede reveal d1" style="max-width:62ch;margin:18px auto 0;">The BIC connects every system, makes sense of fragmented data, and flags issues before they become complaints.</p>
+    </div>
+
+    <div class="sol-duo reveal d2">
+
+      <!-- LOOP VISUAL -->
+      <svg class="sol-loop-svg" viewBox="60 25 740 320" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+        <defs>
+          <!-- Oval lobes (AR ~1.23): less square than before, more natural figure-8 -->
+          <path id="loop-full" d="M145,185 C145,30 290,30 430,185 C570,340 715,340 715,185 C715,30 570,30 430,185 C290,340 145,340 145,185 Z"/>
+
+          <!-- Animated gradient: brand highlight → twilight -->
+          <linearGradient id="loop-grad" x1="145" y1="185" x2="715" y2="185" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#C9A0E8">
+              <animate attributeName="stop-color" values="#C9A0E8;#7096AD;#C9A0E8" dur="5s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>
+            </stop>
+            <stop offset="40%" stop-color="#B8A8DC">
+              <animate attributeName="stop-color" values="#C9A0E8;#7096AD;#C9A0E8" dur="5s" begin="0.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>
+            </stop>
+            <stop offset="60%" stop-color="#9AB8CC">
+              <animate attributeName="stop-color" values="#7096AD;#C9A0E8;#7096AD" dur="5s" begin="0.8s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>
+            </stop>
+            <stop offset="100%" stop-color="#7096AD">
+              <animate attributeName="stop-color" values="#7096AD;#C9A0E8;#7096AD" dur="5s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>
+            </stop>
+          </linearGradient>
+
+          <!-- Lighter gradient for the inner specular highlight -->
+          <linearGradient id="loop-bright" x1="145" y1="185" x2="715" y2="185" gradientUnits="userSpaceOnUse">
+            <stop offset="0%"   stop-color="#E8D0F8"/>
+            <stop offset="50%"  stop-color="#D8E0F4"/>
+            <stop offset="100%" stop-color="#B8D4F0"/>
+          </linearGradient>
+
+          <!-- Right-half clip: right strand paints on top at the crossing -->
+          <clipPath id="clip-over">
+            <rect x="424" y="20" width="460" height="360"/>
+          </clipPath>
+        </defs>
+
+        <!-- Full loop — UNDER layer -->
+        <use href="#loop-full" stroke="url(#loop-grad)"   stroke-width="40"  stroke-opacity=".06" fill="none"/>
+        <use href="#loop-full" stroke="url(#loop-grad)"   stroke-width="24"  stroke-opacity=".10" fill="none"/>
+        <use href="#loop-full" stroke="url(#loop-grad)"   stroke-width="14"  stroke-opacity=".92" fill="none"/>
+        <use href="#loop-full" stroke="url(#loop-bright)" stroke-width="6"   stroke-opacity=".45" fill="none"/>
+        <use href="#loop-full" stroke="white"             stroke-width="2"   stroke-opacity=".30" fill="none"/>
+
+        <!-- Same loop clipped to right half — OVER layer -->
+        <g clip-path="url(#clip-over)">
+          <use href="#loop-full" stroke="url(#loop-grad)"   stroke-width="40"  stroke-opacity=".06" fill="none"/>
+          <use href="#loop-full" stroke="url(#loop-grad)"   stroke-width="24"  stroke-opacity=".10" fill="none"/>
+          <use href="#loop-full" stroke="url(#loop-grad)"   stroke-width="14"  stroke-opacity=".92" fill="none"/>
+          <use href="#loop-full" stroke="url(#loop-bright)" stroke-width="6"   stroke-opacity=".45" fill="none"/>
+          <use href="#loop-full" stroke="white"             stroke-width="2"   stroke-opacity=".30" fill="none"/>
+        </g>
+
+        <!-- AI Agents label -->
+        <text x="287" y="180" text-anchor="middle" font-size="16" font-weight="600" fill="#7B5EA7" fill-opacity=".82" font-family="'PP Formula',sans-serif" letter-spacing="-.01em">AI Agents</text>
+
+        <!-- BPE Experts label -->
+        <text x="572" y="180" text-anchor="middle" font-size="16" font-weight="600" fill="#3F6480" fill-opacity=".82" font-family="'PP Formula',sans-serif" letter-spacing="-.01em">BPE Experts</text>
+
+        <!-- Pulse rings -->
+        <circle cx="430" cy="185" r="30" fill="none" stroke="#C9A0E8" stroke-width="1">
+          <animate attributeName="r" from="30" to="58" dur="2.8s" repeatCount="indefinite"/>
+          <animate attributeName="stroke-opacity" from=".28" to="0" dur="2.8s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="430" cy="185" r="30" fill="none" stroke="#C9A0E8" stroke-width="1">
+          <animate attributeName="r" from="30" to="58" dur="2.8s" begin="1.4s" repeatCount="indefinite"/>
+          <animate attributeName="stroke-opacity" from=".28" to="0" dur="2.8s" begin="1.4s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Central node — stacked icon + BIC, cream bg matching section -->
+        <circle cx="430" cy="185" r="30" fill="rgba(250,250,242,0.96)" stroke="rgba(185,145,225,0.45)" stroke-width="1.5"/>
+        <g transform="translate(430, 176) scale(0.034) translate(-225, -225)" fill="rgba(63,71,47,0.72)">
+          <path d="M236.275 267.467C296.052 269.579 354.673 276.635 407.423 293.525C428.505 300.263 450.022 284.386 450.022 262.262V104.935C450.022 87.814 436.863 73.6719 419.829 72.2259C352.591 66.5864 271.5 81.9432 186.041 117.631C123.835 143.63 67.3543 182.731 22.384 220.645C8.18432 232.589 0 250.26 0 268.856C0 292.252 23.8589 308.216 45.4042 299.106C100.294 275.912 164.93 264.951 236.275 267.467Z"/>
+          <path d="M0 364.842V417.333C0 435.553 14.778 450.331 32.9975 450.331H417.024C435.244 450.331 450.022 435.553 450.022 417.333V361.256C450.022 348.155 442.242 336.327 430.241 331.121C371.909 305.932 304.005 290.083 235.581 287.654C136.126 284.154 65.301 307.522 16.1951 336.529C6.15993 342.487 0 353.216 0 364.842Z"/>
+          <path d="M450.022 33.328C450.022 15.1082 423.965 0.329834 394.004 0.329834H32.9975C14.778 0.329834 0 15.1082 0 33.328V165.35C0 181.429 18.3063 190.828 31.2624 181.285C73.7456 150.08 123.922 121.593 178.233 98.9194C269.331 60.8602 356.206 45.2143 428.216 52.7336C439.842 53.9482 450.022 45.0118 450.022 33.328Z"/>
+        </g>
+        <text x="430" y="201" text-anchor="middle" font-size="11.5" font-weight="500" fill="rgba(63,71,47,0.80)" font-family="'PP Formula',sans-serif" letter-spacing=".06em">BIC</text>
+      </svg>
+
+      <!-- COPY ROW — below the clipped visual area -->
+      <div class="sol-copy-row">
+        <div class="sol-copy">
+          <span class="sol-role-badge ai-badge">Agentic AI</span>
+          <p>Our in-house developed AI agents run 24/7, each handling a specific task for faster, more accurate analysis. Together they flag issues and feed insights to our Building Performance Experts.</p>
+        </div>
+        <div class="sol-copy">
+          <span class="sol-role-badge expert-badge">Building Performance Experts</span>
+          <p>Unlike AI-only platforms, every recommendation is reviewed and validated by our experts with years of building physics knowledge, so you can always trust the advice and know where to act next.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:clamp(28px,3vw,40px);">
+        <a href="#cta" class="btn btn-ink">See it in action
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== INSIDE THE BIC ===================== -->
+<section class="inside section-pad" id="inside">
+  <div class="wrap">
+    <div class="feature-rows">
+
+      <!-- INSIGHTS -->
+      <article class="frow c-sky">
+        <div class="frow-text reveal">
+          <span class="frow-eyebrow"><span class="frow-name">Insights</span></span>
+          <h3>Get a snapshot of your building's performance</h3>
+          <p>See energy, comfort and space utilization across your building or entire portfolio in one live view, and quickly spot what needs attention.</p>
+        </div>
+        <div class="frow-visual reveal d1">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <!-- ENERGY CARD -->
+            <div class="wc kpi">
+              <span class="wc-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>EUI</span>
+              <div style="display:flex;align-items:baseline;gap:4px;margin-top:4px;"><span class="metric" style="font-size:26px;line-height:1;">82</span><span class="u">kWh/m²</span></div>
+              <span class="delta flat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>vs 70 Paris Proof target</span>
+              <svg class="spark" viewBox="0 0 120 36" preserveAspectRatio="none" style="margin-top:8px;width:100%;height:36px;display:block;">
+                <defs><linearGradient id="sp-nrg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#D9FF41" stop-opacity=".35"/><stop offset="100%" stop-color="#D9FF41" stop-opacity=".04"/></linearGradient></defs>
+                <path d="M0 28 L15 26 L30 20 L45 14 L60 8 L75 10 L90 16 L105 24 L120 28 L120 36 L0 36 Z" fill="url(#sp-nrg)"/>
+                <path d="M0 28 L15 26 L30 20 L45 14 L60 8 L75 10 L90 16 L105 24 L120 28" fill="none" stroke="#829246" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <!-- TEMPERATURE CARD -->
+            <div class="wc kpi">
+              <span class="wc-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>Avg temperature</span>
+              <div style="display:flex;align-items:baseline;gap:4px;margin-top:4px;"><span class="metric" style="font-size:26px;line-height:1;">25.8</span><span class="u">°C</span></div>
+              <span class="delta up" style="color:#d94f2b;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>Above comfort band</span>
+              <svg class="spark" viewBox="0 0 120 36" preserveAspectRatio="none" style="margin-top:8px;width:100%;height:36px;display:block;">
+                <defs><linearGradient id="sp-cmf" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#FFAB9A" stop-opacity=".45"/><stop offset="100%" stop-color="#FFAB9A" stop-opacity=".04"/></linearGradient></defs>
+                <path d="M0 28 L15 24 L30 20 L45 16 L60 10 L75 6 L90 4 L105 2 L120 1 L120 36 L0 36 Z" fill="url(#sp-cmf)"/>
+                <path d="M0 28 L15 24 L30 20 L45 16 L60 10 L75 6 L90 4 L105 2 L120 1" fill="none" stroke="#FF6847" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <!-- LEAST USED ROOMS CARD — full width -->
+            <div class="wc" style="grid-column:span 2;padding:14px 16px;">
+              <span class="wc-title" style="margin-bottom:10px;display:flex;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;margin-right:6px;flex:none;"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>Least Used Rooms</span>
+              <div class="lur-list">
+                <div class="lur-row">
+                  <span class="lur-rank">1</span>
+                  <div class="lur-info">
+                    <span class="lur-name">Floor 7 · Room 08</span>
+                    <span class="lur-meta">Meeting Room · Seventh Floor · 24 min/day</span>
+                  </div>
+                  <span class="lur-pct">5%</span>
+                </div>
+                <div class="lur-row">
+                  <span class="lur-rank">2</span>
+                  <div class="lur-info">
+                    <span class="lur-name">Floor 2 · Room 03</span>
+                    <span class="lur-meta">Meeting Room · Second Floor · 58 min/day</span>
+                  </div>
+                  <span class="lur-pct">12%</span>
+                </div>
+                <div class="lur-row">
+                  <span class="lur-rank">3</span>
+                  <div class="lur-info">
+                    <span class="lur-name">Floor 2 · Room 02</span>
+                    <span class="lur-meta">Meeting Room · Second Floor · 67 min/day</span>
+                  </div>
+                  <span class="lur-pct">14%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ACTIVE ALERTS -->
+      <article class="frow reverse c-sunset">
+        <div class="frow-text reveal">
+          <span class="frow-eyebrow"><span class="frow-name">Active Alerts</span></span>
+          <h3>Stay ahead of issues before they escalate</h3>
+          <p>Get notified the moment a comfort issue or unusual energy pattern is detected, so you can act before it becomes a complaint or a cost.</p>
+        </div>
+        <div class="frow-visual reveal d1">
+          <div class="wc viz-alerts-v2">
+            <div class="alert-head">
+              <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="#3F472F" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+              <span class="ah-title">Active Alerts</span><span class="ah-count">3 active</span>
+            </div>
+            <!-- Abstract row 1 -->
+            <div class="alert-abstract">
+              <span class="alert-dot sev-ok"></span>
+              <div class="alert-skel">
+                <div class="skel-bar w-70"></div>
+                <div class="skel-bar w-45"></div>
+              </div>
+              <span class="alert-badge b-ok">Resolved</span>
+            </div>
+            <!-- Abstract row 2 -->
+            <div class="alert-abstract">
+              <span class="alert-dot sev-med"></span>
+              <div class="alert-skel">
+                <div class="skel-bar" style="width:62%"></div>
+                <div class="skel-bar w-45"></div>
+              </div>
+              <span class="alert-badge b-med">Energy</span>
+            </div>
+            <!-- Zoomed detail card -->
+            <div class="alert-zoomed-card">
+              <div class="azc-header">
+                <span class="alert-dot sev-high"></span>
+                <div class="azc-title">Comfort issue detected</div>
+                <span class="alert-badge b-high">Comfort</span>
+                <span class="alert-time">2m ago</span>
+              </div>
+              <div class="azc-sub">Zone 4 — 24.8 °C, above comfort setpoint</div>
+              <div class="azc-details">
+                <div class="azc-row"><span class="azc-label">Duration</span><span class="azc-value">47 min ongoing</span></div>
+                <div class="azc-row"><span class="azc-label">Detected by</span><span class="azc-value">Comfort Agent</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- AI BUILDING ASSISTANT -->
+      <article class="frow c-lav">
+        <div class="frow-text reveal">
+          <span class="frow-eyebrow"><span class="frow-name">AI Building Assistant</span></span>
+          <h3>Ask your building, get instant answers</h3>
+          <p>Instead of digging through dashboards, ask questions directly from the AI Building Assistant and get fast, clear answers.</p>
+        </div>
+        <div class="frow-visual reveal d1">
+          <div class="wc viz-chat">
+            <div class="chat-head">
+              <span class="chat-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg></span>
+              <span class="ch-name">Building AI Assistant</span>
+              <span class="ch-live"><i></i>Live</span>
+            </div>
+            <div class="chat-body">
+              <div class="user-bubble">Are there any issues with building Meridian Tower?</div>
+              <div class="ai-turn">
+                <svg class="ai-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                <div>
+                  <div class="ai-text"><strong>Temperature:</strong> 10 spaces flagged. Worst: <strong>Floor 7 · Room C</strong> — 18% of hours outside optimal range (avg 27.2°C, Category C).<br><br><strong>Ventilation:</strong> 10 spaces flagged. Worst: <strong>Floor 3 · Room A</strong> — 27% of hours with poor air quality (avg 1,083 ppm CO₂, Category C).<br><br><strong>Simultaneous heating &amp; cooling</strong> detected over 88 hrs — estimated waste ~7,574 kWh.</div>
+                  <div class="agent-call-card">
+                    <span class="acc-dot"></span>
+                    <span>Dispatching <strong>Building Analytics Agent</strong> to generate actions for all flagged spaces</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chat-composer" style="pointer-events:none;cursor:default;">
+              <span style="font-size:13px;opacity:.45;padding:0 4px;">Ask about your building...</span>
+              <span class="chat-send" style="opacity:.4;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg></span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ECM TRACKER -->
+      <article class="frow reverse c-sun">
+        <div class="frow-text reveal">
+          <span class="frow-eyebrow"><span class="frow-name">ECM Tracker</span></span>
+          <h3>Improve and track results</h3>
+          <p>See a prioritized list of actions from our Building Performance Experts, ranked by impact, and track every action from recommendation to verified results.</p>
+        </div>
+        <div class="frow-visual reveal d1">
+          <div class="wc viz-ecm-v2">
+            <div class="ecm-abstract-row">
+              <span class="ecm-pill done">Done</span>
+              <div class="ecm-skel">
+                <div class="skel-bar" style="width:65%"></div>
+                <div class="skel-bar w-45"></div>
+              </div>
+              <span class="ecm-num-r">8,750 kWh</span>
+            </div>
+            <div class="ecm-abstract-row">
+              <span class="ecm-pill done">Done</span>
+              <div class="ecm-skel">
+                <div class="skel-bar w-70"></div>
+                <div class="skel-bar w-45"></div>
+              </div>
+              <span class="ecm-num-r">4,200 kWh</span>
+            </div>
+            <div class="ecm-detail-card">
+              <div class="edc-top">
+                <span class="ecm-pill prog">In Progress</span>
+              </div>
+              <div class="edc-title">Simultaneous Heating &amp; Cooling</div>
+              <div class="edc-field">
+                <div class="edc-label">Observed issue</div>
+                <div class="edc-text">AHU-3 heating and cooling activating simultaneously during occupied hours, causing excess energy consumption.</div>
+              </div>
+              <div class="edc-field">
+                <div class="edc-label">Recommended action</div>
+                <div class="edc-text">Widen thermostat deadband from 0.5°C to 2°C and recalibrate zone setpoints on AHU-3.</div>
+              </div>
+              <div class="edc-field edc-savings">
+                <div class="edc-label">Projected savings</div>
+                <div class="edc-savings-row">
+                  <div class="edc-saving-item">
+                    <div class="edc-saving-val">150,000 <span class="edc-saving-unit">kWh/yr</span></div>
+                    <div class="edc-saving-sub">Energy saved</div>
+                  </div>
+                  <div class="edc-saving-divider"></div>
+                  <div class="edc-saving-item">
+                    <div class="edc-saving-val">€ 37,500 <span class="edc-saving-unit">/yr</span></div>
+                    <div class="edc-saving-sub">Cost saved</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- PERFORMANCE BENCHMARK -->
+      <article class="frow c-twilight">
+        <div class="frow-text reveal">
+          <span class="frow-eyebrow"><span class="frow-name">Performance Benchmark</span></span>
+          <h3>See how your building really compares</h3>
+          <p>Benchmark your building's energy, comfort and carbon metrics against peer buildings and regulatory standards, and see exactly where you stand.</p>
+        </div>
+        <div class="frow-visual reveal d1">
+          <div class="wc viz-bench">
+            <!-- Tab navigation -->
+            <div class="bench-tabs">
+              <button class="bench-tab active" data-tab="energy">Energy</button>
+              <button class="bench-tab" data-tab="temp">Temperature</button>
+              <button class="bench-tab" data-tab="co2">CO₂</button>
+            </div>
+
+            <!-- ENERGY PANEL -->
+            <div class="bench-panel" data-panel="energy">
+              <div class="bench-head">
+                <div>
+                  <div class="bench-title">Energy Benchmark</div>
+                  <div class="bench-sub">Energy Use Intensity (EUI) · kWh/m²/yr · lower is better</div>
+                </div>
+              </div>
+              <div class="bench-bars">
+                <div class="bench-bar">
+                  <div class="bb-top"><span class="bb-name you">Your building</span><span class="bb-val">82 kWh/m²</span></div>
+                  <div class="bench-track"><div class="bench-fill you" data-width="41"></div></div>
+                </div>
+                <div class="bench-bar">
+                  <div class="bb-top"><span class="bb-name">Local peers</span><span class="bb-val">118 kWh/m²</span></div>
+                  <div class="bench-note">Similar size · same region</div>
+                  <div class="bench-track"><div class="bench-fill peer" data-width="59"></div></div>
+                </div>
+                <div class="bench-bar">
+                  <div class="bb-top"><span class="bb-name">Paris Proof 2030</span><span class="bb-val">70 kWh/m²</span></div>
+                  <div class="bench-track"><div class="bench-fill paris" data-width="35"></div></div>
+                </div>
+                <div class="bench-bar">
+                  <div class="bb-top"><span class="bb-name">EPBD 2030 target</span><span class="bb-val">100 kWh/m²</span></div>
+                  <div class="bench-track"><div class="bench-fill epbd" data-width="50"></div></div>
+                </div>
+              </div>
+              <div class="bench-foot">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg>
+                31% below peer average — EPBD compliant, on track for Paris Proof
+              </div>
+            </div>
+
+            <!-- TEMPERATURE PANEL -->
+            <div class="bench-panel bench-panel--hidden" data-panel="temp">
+              <div class="bench-head">
+                <div>
+                  <div class="bench-title">Comfort Benchmark</div>
+                  <div class="bench-sub">% of working hours within WELL range (20–23 °C) · higher is better</div>
+                </div>
+              </div>
+              <div class="bench-bars">
+                <div class="bench-bar">
+                  <div class="bb-top"><span class="bb-name you">Your building</span><span class="bb-val">87%</span></div>
+                  <div class="bench-track"><div class="bench-fill you" data-width="87"></div></div>
+                </div>
+                <div class="bench-bar">
+                  <div class="bb-top"><span class="bb-name">Local peers</span><span class="bb-val">62%</span></div>
+                  <div class="bench-note">Same region · similar occupancy profile</div>
+                  <div class="bench-track"><div class="bench-fill peer" data-width="62"></div></div>
+                </div>
+                <div class="bench-bar">
+                  <div class="bb-top"><span class="bb-name">WELL standard (min 80%)</span><span class="bb-val">threshold</span></div>
+                  <div class="bench-track"><div class="bench-fill paris" data-width="80"></div></div>
+                </div>
+                <div class="bench-bar">
+                  <div class="bb-top"><span class="bb-name">WELL Platinum (≥90%)</span><span class="bb-val">target</span></div>
+                  <div class="bench-track"><div class="bench-fill epbd" data-width="90"></div></div>
+                </div>
+              </div>
+              <div class="bench-foot">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg>
+                25 pts above peers — meets WELL standard, approaching Platinum
+              </div>
+            </div>
+
+            <!-- CO₂ PANEL -->
+            <div class="bench-panel bench-panel--hidden" data-panel="co2">
+              <div class="bench-head">
+                <div>
+                  <div class="bench-title">CO₂ Benchmark</div>
+                  <div class="bench-sub">Indoor CO₂ average · ppm · lower is better</div>
+                </div>
+              </div>
+              <div class="bench-bars">
+                <div class="bench-bar">
+                  <div class="bb-top"><span class="bb-name you">Your building</span><span class="bb-val">820 ppm</span></div>
+                  <div class="bench-track"><div class="bench-fill you" data-width="41"></div></div>
+                </div>
+                <div class="bench-bar">
+                  <div class="bb-top"><span class="bb-name">Local peers</span><span class="bb-val">1,050 ppm</span></div>
+                  <div class="bench-note">Same region · similar size</div>
+                  <div class="bench-track"><div class="bench-fill peer" data-width="52"></div></div>
+                </div>
+                <div class="bench-bar">
+                  <div class="bb-top"><span class="bb-name">WELL max (1,000 ppm)</span><span class="bb-val">limit</span></div>
+                  <div class="bench-track"><div class="bench-fill paris" data-width="50"></div></div>
+                </div>
+                <div class="bench-bar">
+                  <div class="bb-top"><span class="bb-name">WELL Platinum (≤800 ppm)</span><span class="bb-val">target</span></div>
+                  <div class="bench-track"><div class="bench-fill epbd" data-width="40"></div></div>
+                </div>
+              </div>
+              <div class="bench-foot">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg>
+                22% below peer average — within WELL Platinum CO₂ threshold
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DATA FOUNDATION ===================== -->
+<section class="data section-pad" id="data">
+  <div class="wrap">
+    <div class="data-head" style="max-width:none;align-items:center;text-align:center;">
+      <span class="eyebrow reveal">Data Foundation</span>
+      <h2 class="h2 reveal" style="margin-top:20px;">Connect any building.<br>Trust every data point.</h2>
+    </div>
+    <div class="data-grid">
+      <div class="data-item reveal">
+        <div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/></svg></div>
+        <h3>Connect any building</h3>
+        <p>We connect to any building, regardless of its systems, whether modern sensors, legacy infrastructure, or mixed-vendor environments.</p>
+      </div>
+      <div class="data-item reveal d1">
+        <div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <h3>Always have complete data</h3>
+        <p>All live connections are continuously monitored and audited for health, so every analysis is based on complete, accurate data.</p>
+      </div>
+      <div class="data-item reveal d2">
+        <div class="di-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg></div>
+        <h3>Be warned when data fails</h3>
+        <p>With 24/7 measurement and verification, get instant alerts when data gaps occur, from third-party disruptions to faulty installations and meter errors.</p>
+      </div>
+    </div>
+    <div class="data-learn reveal d2">
+      <a href="#cta" class="btn btn-light" style="margin-inline:auto;">See how we connect buildings
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== STAKEHOLDERS ====================== -->
+<section class="lenses section-pad" id="lenses">
+  <div class="wrap">
+    <div class="lenses-head" style="text-align:center;margin-inline:auto;">
+      <h2 class="h2 reveal d1" style="margin-top:0;">Built for every stakeholder in commercial real estate.</h2>
+      <p class="lede reveal d2">Whether you own the building, operate it, or work in it, the BIC gives every stakeholder the visibility needed to make buildings perform.</p>
+    </div>
+
+    <div class="stake-grid reveal d2">
+
+      <div class="stake-card">
+        <span class="stake-role" style="color:var(--sunset);">For Operators</span>
+        <h3>Stop digging for data. Catch issues early.</h3>
+        <p>Get live visibility into comfort, energy, and space usage across your portfolio — and know exactly where to act first.</p>
+        <a href="https://www.next-sense.com/use-cases/for-operators" class="stake-learn">Learn more
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="stake-card">
+        <span class="stake-role" style="color:var(--soil);">For Owners</span>
+        <h3>Protect asset value and hit your targets.</h3>
+        <p>Identify underperforming assets, prioritise high-impact actions, and meet your decarbonisation goals.</p>
+        <a href="https://www.next-sense.com/use-cases/for-owners" class="stake-learn">Learn more
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="stake-card">
+        <span class="stake-role" style="color:var(--twilight);">For Occupiers</span>
+        <h3>A healthier, smarter workplace.</h3>
+        <p>Enjoy optimal comfort, reduce energy costs, and have full visibility into how your office buildings are performing.</p>
+        <a href="https://www.next-sense.com/use-cases/for-occupiers" class="stake-learn">Learn more
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========================= PROOF ========================= -->
+<section class="proof section-pad-lg" id="proof">
+  <div class="wrap">
+    <div class="proof-head" style="text-align:center;margin-inline:auto;max-width:none;">
+      <span class="eyebrow reveal">Success Stories</span>
+      <h2 class="h2 reveal d1" style="margin-top:18px;">Proven results across 200+ buildings worldwide.</h2>
+      <p class="lede reveal d2">Learn how we helped leading companies cut energy costs and improve building performance.</p>
+    </div>
+
+    <div class="proof-scroll-wrap">
+    <div class="proof-grid reveal d2">
+
+      <div class="proof-card">
+        <div class="proof-img"><img src="https://cdn.prod.website-files.com/660fc5e5c317335637291289/6a2143e98fd46a15cbd38ab1_6901037376cc5ba56b3c9c6b_TN%20Tech%20Leader%20Blog.webp" alt="Global Technology Company" loading="lazy"/></div>
+        <div class="proof-card-body">
+          <div class="proof-meta"><span class="proof-loc">Latin America · Office building</span><span class="proof-company">Global Technology Company</span></div>
+          <div class="proof-stat-block"><span class="proof-stat">12%</span><span class="proof-stat-label">Energy savings potential</span></div>
+          <p>Identified across ventilation, lighting and plug loads — within 3 months of connection.</p>
+        </div>
+      </div>
+
+      <div class="proof-card">
+        <div class="proof-img"><img src="https://cdn.prod.website-files.com/660fc5e5c317335637291289/6a2145c994483837c21041d1_67d9dd299d31c8fb557c6f10_PrimoTN.webp" alt="Primo Building, Milan" loading="lazy"/></div>
+        <div class="proof-card-body">
+          <div class="proof-meta"><span class="proof-loc">Milan, Italy · Office building</span><span class="proof-company">Ardian — Primo Building</span></div>
+          <div class="proof-stat-block"><span class="proof-stat">11.8%</span><span class="proof-stat-label">Total energy savings achieved</span></div>
+          <p>Energy reduction and 19.5 tCO₂e avoided — from optimizing cooling, ventilation and lighting schedules.</p>
+        </div>
+      </div>
+
+      <div class="proof-card">
+        <div class="proof-img"><img src="https://cdn.prod.website-files.com/660fc5e5c317335637291289/6a2143767e5868ff21790058_690350f49f0d686b77633d3e_TN%20Luxury%20Brand.webp" alt="Global Luxury Brand, Dubai" loading="lazy"/></div>
+        <div class="proof-card-body">
+          <div class="proof-meta"><span class="proof-loc">Dubai, UAE · Office building</span><span class="proof-company">Global Luxury Brand</span></div>
+          <div class="proof-stat-block"><span class="proof-stat">30%</span><span class="proof-stat-label">Cooling energy reduction potential</span></div>
+          <p>Up to 30% cooling and 23% electricity reduction — identified and delivered as a prioritized action plan.</p>
+        </div>
+      </div>
+
+      <div class="proof-card">
+        <div class="proof-img"><img src="https://cdn.prod.website-files.com/660fc5e5c317335637291289/6a214745fc352801f16d9376_67ace644be1162b9f4a343f6_Ruiz2.webp" alt="Ruíz Picasso 11, Madrid" loading="lazy"/></div>
+        <div class="proof-card-body">
+          <div class="proof-meta"><span class="proof-loc">Madrid, Spain · Office building</span><span class="proof-company">Merlin Properties — Ruíz Picasso 11</span></div>
+          <div class="proof-stat-block"><span class="proof-stat">11%</span><span class="proof-stat-label">Total energy savings achieved</span></div>
+          <p>333,529 kWh annual savings potential identified — equivalent to 58 tonnes of CO₂e per year.</p>
+        </div>
+      </div>
+
+      <div class="proof-card">
+        <div class="proof-img"><img src="https://cdn.prod.website-files.com/660fc5e5c317335637291289/6a213f4c89832b272f23ab2a_69fddb49a201b1f42e775adf_VastintBlog.avif" alt="TreeCity The Hill, Amsterdam" loading="lazy"/></div>
+        <div class="proof-card-body">
+          <div class="proof-meta"><span class="proof-loc">Amsterdam · Mixed-use</span><span class="proof-company">Vastint &amp; TreeCity — The Hill</span></div>
+          <div class="proof-stat-block"><span class="proof-stat">91%</span><span class="proof-stat-label">Occupied time in thermal comfort Category A</span></div>
+          <p>Data-driven foundation for Paris-Proof performance — targeting 10% reduction in energy and CO₂.</p>
+        </div>
+      </div>
+
+      <div class="proof-card">
+        <div class="proof-img"><img src="https://cdn.prod.website-files.com/660fc5e5c317335637291289/6a213fbd04d6b0310d88a44a_69cd402d19bd43f02c328d60_KBFTN.webp" alt="Kauwgomballenfabriek" loading="lazy"/></div>
+        <div class="proof-card-body">
+          <div class="proof-meta"><span class="proof-loc">Netherlands · Office building</span><span class="proof-company">Kauwgomballenfabriek</span></div>
+          <div class="proof-stat-block"><span class="proof-stat">51%</span><span class="proof-stat-label">HVAC energy reduction achieved</span></div>
+          <p>51% reduction in HVAC energy consumption for ventilation in vacant areas.</p>
+        </div>
+      </div>
+
+    </div>
+    </div><!-- end proof-scroll-wrap -->
+  </div>
+</section>
+
+<!-- ========================= FINAL CTA ========================= -->
+<section class="cta section-pad-lg" id="cta">
+  <div class="wrap cta-inner">
+    <h2 class="h2 reveal">Scattered data and non-performing assets?</h2>
+    <p class="reveal d1">We connect the dots. <span style="color:var(--digital-sun);font-weight:600;">You get the benefits.</span></p>
+    <div class="cta-btn reveal d2">
+      <a href="#" class="btn btn-light" style="font-size:17px;padding:16px 32px;">Book a demo
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========================== FOOTER ========================== -->
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <img class="footer-logo" src="assets/logo-full.svg" alt="NextSense" />
+    <div class="footer-links">
+      <a href="#solution">How it works</a>
+      <a href="#inside">What's inside</a>
+      <a href="#data">Data foundation</a>
+      <a href="#cta">Book a demo</a>
+    </div>
+    <span class="footer-powered">Powered by Next Sense</span>
+  </div>
+</footer>
+
+<script>
+// Rotating hero role
+(function(){
+  const roles = ['Operators', 'Occupiers', 'Owners'];
+  let ri = 0;
+  const el = document.getElementById('hero-role');
+  if (!el) return;
+  setInterval(() => {
+    el.classList.add('fading');
+    setTimeout(() => {
+      ri = (ri + 1) % roles.length;
+      el.textContent = roles[ri];
+      el.classList.remove('fading');
+    }, 320);
+  }, 2800);
+})();
+
+// Sticky nav
+const nav = document.getElementById('nav');
+const onScroll = () => { nav.classList.toggle('scrolled', window.scrollY > 40); };
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// Scroll reveal — alternating directions
+document.documentElement.classList.add('js-anim');
+document.querySelectorAll('.frow').forEach((row, i) => {
+  const txt = row.querySelector('.frow-text');
+  const vis = row.querySelector('.frow-visual');
+  if (txt) txt.dataset.dir = row.classList.contains('reverse') ? 'right' : 'left';
+  if (vis) vis.dataset.dir = row.classList.contains('reverse') ? 'left' : 'right';
+});
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); revealObs.unobserve(e.target); } });
+}, { threshold: 0.10, rootMargin: '0px 0px -6% 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+window.addEventListener('load', () => {
+  document.querySelectorAll('.reveal').forEach(el => {
+    const r = el.getBoundingClientRect();
+    if (r.top < window.innerHeight && r.bottom > 0) el.classList.add('in');
+  });
+});
+
+// Benchmark bar animation
+function animateBars(container) {
+  container.querySelectorAll('.bench-fill[data-width]').forEach(bar => {
+    bar.style.width = bar.dataset.width + '%';
+  });
+}
+const barObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    animateBars(e.target);
+    barObs.unobserve(e.target);
+  });
+}, { threshold: 0.3 });
+const benchEl = document.querySelector('.viz-bench');
+if (benchEl) {
+  benchEl.querySelectorAll('.bench-fill[data-width]').forEach(b => b.style.width = '0%');
+  barObs.observe(benchEl);
+  // Tab switching
+  benchEl.querySelectorAll('.bench-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      benchEl.querySelectorAll('.bench-tab').forEach(t => t.classList.remove('active'));
+      benchEl.querySelectorAll('.bench-panel').forEach(p => p.classList.add('bench-panel--hidden'));
+      tab.classList.add('active');
+      const panel = benchEl.querySelector(`[data-panel="${tab.dataset.tab}"]`);
+      panel.classList.remove('bench-panel--hidden');
+      // Reset + animate bars in the newly shown panel
+      panel.querySelectorAll('.bench-fill[data-width]').forEach(b => b.style.width = '0%');
+      requestAnimationFrame(() => requestAnimationFrame(() => animateBars(panel)));
+    });
+  });
+}
+
+// Insights tab switching
+const insightsEl = document.querySelector('.viz-insights');
+if (insightsEl) {
+  insightsEl.querySelectorAll('.bench-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      insightsEl.querySelectorAll('.bench-tab').forEach(t => t.classList.remove('active'));
+      insightsEl.querySelectorAll('.bench-panel').forEach(p => p.classList.add('bench-panel--hidden'));
+      tab.classList.add('active');
+      insightsEl.querySelector(`[data-panel="${tab.dataset.tab}"]`).classList.remove('bench-panel--hidden');
+    });
+  });
+}
+
+// Number counter animation
+function animateCount(el, target, suffix, duration) {
+  const start = performance.now();
+  const update = (now) => {
+    const t = Math.min((now - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - t, 3);
+    const val = Math.round(ease * target);
+    el.textContent = val.toLocaleString('en-US') + suffix;
+    if (t < 1) requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+}
+const countObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.querySelectorAll('[data-count]').forEach(el => {
+      animateCount(el, +el.dataset.count, el.dataset.suffix || '', 1400);
+    });
+    countObs.unobserve(e.target);
+  });
+}, { threshold: 0.4 });
+document.querySelectorAll('[data-count]').forEach(el => {
+  el.textContent = '0' + (el.dataset.suffix || '');
+  countObs.observe(el.closest('.wc') || el.parentElement);
+});
+</script>
+</body>
+</html>

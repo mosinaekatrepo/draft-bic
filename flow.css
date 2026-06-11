@@ -1,0 +1,165 @@
+/* ============================================================
+   NextSense BIC — Solution: interactive flow engine
+   Visualises the loop between Agentic AI and Building Performance Experts
+   ============================================================ */
+
+.flow { margin-top: clamp(40px, 6vw, 72px); }
+
+.flow-stage {
+  background: #fff; border: 1px solid var(--ink-12); border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md); padding: clamp(22px, 3.2vw, 44px) clamp(22px, 3.2vw, 48px);
+  position: relative; overflow: hidden;
+}
+
+/* ---- Top stepper ---- */
+.flow-steps { display: flex; align-items: stretch; gap: 0; margin-bottom: clamp(28px, 4vw, 44px); flex-wrap: wrap; }
+.fstep {
+  flex: 1 1 0; min-width: 130px; position: relative; cursor: pointer; background: transparent; border: 0;
+  text-align: left; padding: 0 16px 0 0; display: flex; align-items: flex-start; gap: 11px;
+  font-family: var(--font-body); transition: opacity .25s ease;
+}
+.fstep:not(.active) { opacity: .5; }
+.fstep:hover { opacity: .85; }
+.fstep .fs-num {
+  flex: none; width: 30px; height: 30px; border-radius: 999px; display: grid; place-items: center;
+  font-family: var(--font-display); font-weight: 500; font-size: 14px;
+  background: var(--ink-06); color: var(--ink-60); transition: all .3s ease; border: 1.5px solid transparent;
+}
+.fstep.active .fs-num { background: var(--web); color: var(--verdure); }
+.fstep .fs-label { display: flex; flex-direction: column; gap: 2px; padding-top: 3px; }
+.fstep .fs-t { font-size: 14px; font-weight: 600; color: var(--ink); line-height: 1.15; }
+.fstep .fs-s { font-size: 12px; color: var(--ink-60); line-height: 1.2; }
+/* connector line behind nums */
+.fstep::after {
+  content: ""; position: absolute; left: 30px; right: 0; top: 14px; height: 2px;
+  background: var(--ink-12); z-index: -1;
+}
+.fstep:last-child::after { display: none; }
+@media (max-width: 760px) {
+  .flow-steps { gap: 10px; }
+  .fstep { flex: 1 1 45%; padding-right: 0; }
+  .fstep::after { display: none; }
+}
+
+/* ---- Pipeline ---- */
+.flow-pipe { display: flex; flex-direction: column; align-items: center; gap: 0; }
+
+/* IO rails (data in / action out) */
+.flow-io {
+  width: 100%; max-width: 640px; border: 1px solid var(--ink-12); border-radius: 16px;
+  background: var(--verdure); padding: 14px 18px; display: flex; align-items: center; gap: 14px;
+  transition: border-color .3s ease, box-shadow .3s ease, background .3s ease;
+}
+.flow-io.lit { border-color: var(--soil); box-shadow: 0 0 0 3px color-mix(in srgb, var(--soil) 22%, transparent); background: #fff; }
+.flow-io .io-ic { width: 38px; height: 38px; flex: none; border-radius: 11px; display: grid; place-items: center; background: var(--halo); color: var(--soil); }
+.flow-io .io-ic svg { width: 20px; height: 20px; }
+.flow-io .io-body { flex: 1; min-width: 0; }
+.flow-io .io-title { font-size: 13px; font-weight: 600; color: var(--ink); }
+.flow-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.flow-chips span { font-size: 11px; font-family: var(--font-mono); color: var(--ink-60); background: var(--ink-06); border-radius: 999px; padding: 2px 9px; }
+
+/* vertical connector arrows */
+.flow-vconn { width: 2px; height: 30px; background: var(--ink-12); position: relative; }
+.flow-vconn::after {
+  content: ""; position: absolute; bottom: -1px; left: 50%; transform: translateX(-50%);
+  border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid var(--ink-40);
+}
+.flow-vconn .vdot {
+  position: absolute; left: 50%; top: 0; width: 7px; height: 7px; border-radius: 999px; margin-left: -3.5px;
+  background: var(--soil); opacity: 0;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .flow-vconn.flowing .vdot { animation: vflow 1.4s linear infinite; }
+}
+@keyframes vflow { 0%{ top: 0; opacity: 0; } 15%{ opacity: 1; } 85%{ opacity: 1; } 100%{ top: 100%; opacity: 0; } }
+
+/* ---- Core loop: AI <-> Experts ---- */
+.flow-core {
+  width: 100%; display: grid; grid-template-columns: 1fr minmax(120px, 200px) 1fr; gap: 0;
+  align-items: stretch;
+}
+
+.node {
+  border: 1.5px solid var(--ink-12); border-radius: 20px; padding: 20px; background: #fff;
+  cursor: pointer; transition: transform .3s cubic-bezier(.2,.7,.2,1), box-shadow .3s ease, border-color .3s ease;
+  display: flex; flex-direction: column; gap: 12px; text-align: left;
+}
+.node:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.node-head { display: flex; align-items: center; gap: 10px; }
+.node-ic { width: 42px; height: 42px; flex: none; border-radius: 12px; display: grid; place-items: center; }
+.node-ic svg { width: 22px; height: 22px; stroke-width: 1.6; }
+.node-title { font-family: var(--font-display); font-weight: 500; font-size: clamp(18px, 1.9vw, 22px); color: var(--ink); line-height: 1.05; }
+.node-badge { margin-left: auto; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+
+/* AI node */
+.node.ai .node-ic { background: color-mix(in srgb, var(--highlight) 36%, #fff); color: #8a4bb5; }
+.node.ai .node-badge { background: color-mix(in srgb, var(--highlight) 30%, #fff); color: #7a3ba5; }
+.node.ai.lit { border-color: var(--highlight); box-shadow: 0 0 0 3px color-mix(in srgb, var(--highlight) 30%, transparent), var(--shadow-md); }
+.agent-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.agent-chip {
+  display: flex; align-items: center; gap: 7px; padding: 8px 10px; border-radius: 10px;
+  background: var(--verdure); border: 1px solid var(--ink-12); cursor: pointer;
+  font-size: 12.5px; font-weight: 500; color: var(--ink); transition: all .2s ease;
+}
+.agent-chip:hover { border-color: var(--highlight); background: color-mix(in srgb, var(--highlight) 12%, #fff); }
+.agent-chip .ac-dot { width: 7px; height: 7px; border-radius: 999px; background: #8a4bb5; flex: none; }
+.ai-caption { font-size: 12.5px; color: var(--ink-60); line-height: 1.45; min-height: 36px; display: flex; align-items: center; gap: 7px; }
+.ai-caption .pulse { width: 7px; height: 7px; border-radius: 999px; background: var(--digital-sun); flex: none; box-shadow: 0 0 0 3px rgba(217,255,65,.3); }
+
+/* Expert node */
+.node.expert .node-ic { background: var(--haze); color: var(--twilight); }
+.node.expert .node-badge { background: var(--haze); color: #2f5168; }
+.node.expert.lit { border-color: var(--sky); box-shadow: 0 0 0 3px color-mix(in srgb, var(--sky) 40%, transparent), var(--shadow-md); }
+.expert-list { display: flex; flex-direction: column; gap: 9px; }
+.expert-list li { list-style: none; display: flex; align-items: flex-start; gap: 9px; font-size: 13px; color: var(--ink); line-height: 1.35; }
+.expert-list svg { width: 17px; height: 17px; color: var(--twilight); flex: none; margin-top: 1px; }
+.expert-list ul { margin: 0; padding: 0; }
+
+/* ---- Exchange lanes (the loop) ---- */
+.exchange { display: flex; flex-direction: column; justify-content: center; gap: 18px; padding: 0 6px; }
+.lane { position: relative; display: flex; flex-direction: column; gap: 7px; }
+.lane-label { font-size: 10.5px; font-weight: 600; letter-spacing: .02em; text-align: center; color: var(--ink-40); line-height: 1.25; transition: color .3s ease; }
+.lane.flowing .lane-label { color: var(--ink); }
+.lane-track { position: relative; height: 2px; border-radius: 2px; background: var(--ink-12); transition: background .3s ease; }
+.lane.top.flowing .lane-track { background: linear-gradient(90deg, color-mix(in srgb, var(--highlight) 60%, #fff), var(--sky)); }
+.lane.bottom.flowing .lane-track { background: linear-gradient(90deg, var(--sky), color-mix(in srgb, var(--highlight) 60%, #fff)); }
+/* arrowheads */
+.lane .arrow { position: absolute; top: 50%; width: 0; height: 0; }
+.lane.top .arrow { right: -1px; transform: translateY(-50%); border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 7px solid var(--ink-40); }
+.lane.bottom .arrow { left: -1px; transform: translateY(-50%); border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-right: 7px solid var(--ink-40); }
+.lane.top.flowing .arrow { border-left-color: var(--sky); }
+.lane.bottom.flowing .arrow { border-right-color: var(--highlight); }
+/* moving packet */
+.lane .packet { position: absolute; top: 50%; width: 8px; height: 8px; border-radius: 999px; margin-top: -4px; opacity: 0; }
+.lane.top .packet { background: #8a4bb5; }
+.lane.bottom .packet { background: var(--twilight); }
+@media (prefers-reduced-motion: no-preference) {
+  .lane.top.flowing .packet { animation: pkR 1.5s linear infinite; }
+  .lane.bottom.flowing .packet { animation: pkL 1.5s linear infinite; }
+}
+@keyframes pkR { 0%{ left: 0; opacity: 0; } 12%{ opacity: 1; } 88%{ opacity: 1; } 100%{ left: 100%; opacity: 0; } }
+@keyframes pkL { 0%{ left: 100%; opacity: 0; } 12%{ opacity: 1; } 88%{ opacity: 1; } 100%{ left: 0; opacity: 0; } }
+.loop-tag { text-align: center; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-40); display: inline-flex; align-items: center; gap: 5px; justify-content: center; }
+.loop-tag svg { width: 13px; height: 13px; }
+
+/* ---- Detail panel ---- */
+.flow-detail { margin-top: clamp(26px, 3.5vw, 40px); border-top: 1px dashed var(--ink-12); padding-top: clamp(22px, 3vw, 30px); }
+.flow-detail-item { display: flex; gap: 18px; align-items: flex-start; }
+.flow-detail-item[hidden] { display: none; }
+.fd-mark { width: 46px; height: 46px; flex: none; border-radius: 13px; display: grid; place-items: center; }
+.fd-mark svg { width: 23px; height: 23px; stroke-width: 1.6; }
+.flow-detail-item.in .fd-mark { background: var(--halo); color: var(--soil); }
+.flow-detail-item.ai .fd-mark { background: color-mix(in srgb, var(--highlight) 36%, #fff); color: #8a4bb5; }
+.flow-detail-item.expert .fd-mark { background: var(--haze); color: var(--twilight); }
+.flow-detail-item.out .fd-mark { background: var(--mist); color: #b3402a; }
+.fd-body { flex: 1; }
+.fd-body h4 { font-family: var(--font-display); font-weight: 500; font-size: clamp(20px, 2.1vw, 26px); color: var(--ink); margin-bottom: 7px; }
+.fd-body p { margin: 0; color: var(--ink-60); font-size: clamp(15px, 1.3vw, 17px); line-height: 1.6; max-width: 64ch; text-wrap: pretty; }
+
+@media (max-width: 760px) {
+  .flow-core { grid-template-columns: 1fr; gap: 0; }
+  .exchange { flex-direction: row; padding: 18px 0; gap: 22px; }
+  .exchange .lane { flex: 1; }
+  .loop-tag { display: none; }
+  .node { text-align: left; }
+}
