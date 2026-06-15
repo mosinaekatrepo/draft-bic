@@ -30,7 +30,7 @@
     <h1 class="display reveal d1">Talk to Your Building.<br />Get Insights. Take Action.</h1>
     <p class="hero-lede reveal d2">The Building Intelligence Center pairs agentic AI with human experts to turn scattered building data into clear actions that improve <em>energy efficiency</em> and <em>comfort</em> across your portfolio.</p>
     <div class="hero-cta reveal d3">
-      <a href="https://www.next-sense.com/contact-us" class="btn btn-light">Book a demo</a>
+      <a href="https://www.next-sense.com/contact-us" class="btn btn-light">Join the waitlist</a>
       <a href="#solution" class="btn btn-ghost-light">See how it works
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
       </a>
@@ -674,11 +674,11 @@
   <div class="wrap cta-inner">
     <h2 class="h2 reveal">Scattered data and non-performing assets?</h2>
     <p class="reveal d1">We connect the dots. <span style="color:var(--digital-sun);font-weight:600;">You get the benefits.</span></p>
-    <div class="cta-btn reveal d2">
-      <a href="https://www.next-sense.com/contact-us" class="btn btn-light" style="font-size:17px;padding:16px 32px;">Book a demo
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-      </a>
-    </div>
+    <form class="waitlist-form reveal d2" onsubmit="handleWaitlist(event)">
+      <input type="email" class="waitlist-input" placeholder="Enter your email" required />
+      <button type="submit" class="btn btn-light waitlist-btn">Join the waitlist</button>
+    </form>
+    <p class="waitlist-thanks" id="waitlist-thanks" style="display:none;">Thanks! We'll be in touch.</p>
   </div>
 </section>
 
@@ -690,13 +690,20 @@
       <a href="#solution">How it works</a>
       <a href="#inside">What's inside</a>
       <a href="#data">Data foundation</a>
-      <a href="https://www.next-sense.com/contact-us">Book a demo</a>
+      <a href="https://www.next-sense.com/contact-us">Join the waitlist</a>
     </div>
     <span class="footer-powered">Powered by Next Sense</span>
   </div>
 </footer>
 
 <script>
+// Waitlist form
+function handleWaitlist(e) {
+  e.preventDefault();
+  e.target.style.display = 'none';
+  document.getElementById('waitlist-thanks').style.display = 'block';
+}
+
 // Rotating hero role
 (function(){
   const roles = ['Operators', 'Occupiers', 'Owners'];
