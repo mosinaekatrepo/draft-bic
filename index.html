@@ -446,9 +446,9 @@
                   <line x1="0" y1="4" x2="200" y2="4" stroke="#d94f2b" stroke-width="1.6" stroke-dasharray="5 3"/>
                   <!-- "Today" marker at 2026 (x≈40) -->
                   <line x1="40" y1="2" x2="40" y2="52" stroke="#888" stroke-width="0.8" stroke-dasharray="2 2" opacity=".4"/>
-                  <!-- Dot on building line at today -->
-                  <circle cx="40" cy="4" r="2.5" fill="#d94f2b"/>
                 </svg>
+                <!-- Dot as separate element so it stays circular despite preserveAspectRatio="none" -->
+                <div style="position:absolute;top:1px;left:calc(20% - 3px);width:6px;height:6px;border-radius:50%;background:#d94f2b;pointer-events:none;"></div>
                 <!-- X-axis labels -->
                 <div style="display:flex;font-size:9.5px;color:#aaa;margin-top:3px;position:relative;">
                   <span>2020</span>
