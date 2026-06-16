@@ -873,10 +873,9 @@ section { position: relative; }
   font-size: 13px;
   font-weight: 600;
   color: var(--ink);
-  opacity: .6;
-  transition: opacity .2s, gap .2s;
+  transition: gap .2s;
 }
-.proof-link:hover { opacity: 1; gap: 8px; }
+.proof-link:hover { gap: 9px; }
 
 .stake-learn {
   display: inline-flex;
@@ -943,7 +942,7 @@ section { position: relative; }
 .proof-card {
   flex: 0 0 clamp(300px, 34vw, 400px);
   scroll-snap-align: start;
-  background: #fff;
+  background: var(--verdure);
   border: 1px solid var(--ink-12);
   border-radius: var(--radius-xl);
   overflow: hidden;
