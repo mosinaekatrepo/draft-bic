@@ -186,8 +186,12 @@
 
 /* Year on year */
 .yoy-chart-wrap { margin-top: 8px; }
+.yoy-chart-row { display: flex; align-items: flex-start; gap: 4px; }
+.yoy-ylabels { position: relative; width: 24px; flex-shrink: 0; height: 80px; }
+.yoy-ylabels span { position: absolute; right: 0; font-size: 7.5px; color: var(--ink-40); line-height: 1; transform: translateY(-50%); }
+.yoy-chart-area { flex: 1; min-width: 0; }
 .yoy-svg { width: 100%; height: 80px; display: block; }
-.yoy-axis { display: flex; justify-content: space-between; font-size: 10px; color: var(--ink-40); margin-top: 4px; padding: 0 14px; }
+.yoy-axis { display: flex; justify-content: space-between; font-size: 10px; color: var(--ink-40); margin-top: 4px; padding: 0; }
 
 @media (max-width: 860px) {
   .frow { grid-template-columns: 1fr; gap: 32px; }
