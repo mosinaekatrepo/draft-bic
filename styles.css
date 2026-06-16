@@ -865,6 +865,19 @@ section { position: relative; }
   box-shadow: var(--shadow-lg);
   border-color: rgba(63,71,47,.3);
 }
+.proof-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  opacity: .6;
+  transition: opacity .2s, gap .2s;
+}
+.proof-link:hover { opacity: 1; gap: 8px; }
+
 .stake-learn {
   display: inline-flex;
   align-items: center;
