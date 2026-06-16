@@ -708,6 +708,16 @@ function handleWaitlist(e) {
   document.getElementById('waitlist-thanks').style.display = 'block';
 }
 
+// Mouse wheel horizontal scroll on proof carousel
+(function(){
+  const el = document.querySelector('.proof-scroll-wrap');
+  if (!el) return;
+  el.addEventListener('wheel', e => {
+    e.preventDefault();
+    el.scrollLeft += e.deltaY;
+  }, { passive: false });
+})();
+
 // Rotating hero role
 (function(){
   const roles = ['Operators', 'Occupiers', 'Owners'];
