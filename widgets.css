@@ -172,6 +172,8 @@
 .bench-fill.paris { background: var(--ink-40); }
 .bench-foot { display: flex; align-items: center; gap: 6px; margin-top: 16px; font-size: 12px; color: var(--soil); font-weight: 500; }
 .bench-foot svg { width: 14px; height: 14px; }
+.bench-yoy { display: flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: #2f8f4e; white-space: nowrap; }
+.bench-yoy svg { width: 13px; height: 13px; stroke: #2f8f4e; }
 
 @media (max-width: 860px) {
   .frow { grid-template-columns: 1fr; gap: 32px; }
