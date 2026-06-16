@@ -708,6 +708,26 @@ function handleWaitlist(e) {
   document.getElementById('waitlist-thanks').style.display = 'block';
 }
 
+// Drag-to-scroll on proof grid
+(function(){
+  const el = document.querySelector('.proof-scroll-wrap');
+  if (!el) return;
+  let isDown = false, startX, scrollLeft;
+  el.addEventListener('mousedown', e => {
+    isDown = true;
+    el.classList.add('is-dragging');
+    startX = e.pageX - el.offsetLeft;
+    scrollLeft = el.scrollLeft;
+  });
+  el.addEventListener('mouseleave', () => { isDown = false; el.classList.remove('is-dragging'); });
+  el.addEventListener('mouseup', () => { isDown = false; el.classList.remove('is-dragging'); });
+  el.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    e.preventDefault();
+    el.scrollLeft = scrollLeft - (e.pageX - el.offsetLeft - startX);
+  });
+})();
+
 // Rotating hero role
 (function(){
   const roles = ['Operators', 'Occupiers', 'Owners'];
