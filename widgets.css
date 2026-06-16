@@ -376,7 +376,7 @@
 .epc-you {
   font-size: 10px;
   font-weight: 600;
-  color: #87A330;
+  color: var(--ink-60);
   white-space: nowrap;
   margin-left: 2px;
 }
