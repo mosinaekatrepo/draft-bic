@@ -175,6 +175,20 @@
 .bench-yoy { display: flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: #2f8f4e; white-space: nowrap; }
 .bench-yoy svg { width: 13px; height: 13px; stroke: #2f8f4e; }
 
+/* Bell curve */
+.bell-wrap { margin-top: 8px; position: relative; }
+.bell-svg { width: 100%; height: 80px; display: block; overflow: visible; }
+.bell-axis { display: flex; justify-content: space-between; position: relative; font-size: 10px; color: var(--ink-40); margin-top: 4px; }
+.bell-label { display: flex; flex-direction: column; gap: 2px; margin-top: 10px; padding: 8px 12px; background: color-mix(in srgb, var(--soil) 8%, transparent); border-radius: 8px; border: 1px solid color-mix(in srgb, var(--soil) 20%, transparent); }
+.bell-label-name { font-size: 11.5px; font-weight: 600; color: var(--ink); }
+.bell-label-stat { font-size: 11px; color: var(--ink-60); }
+.bell-label-stat strong { color: var(--soil); }
+
+/* Year on year */
+.yoy-chart-wrap { margin-top: 8px; }
+.yoy-svg { width: 100%; height: 80px; display: block; }
+.yoy-axis { display: flex; justify-content: space-between; font-size: 10px; color: var(--ink-40); margin-top: 4px; padding: 0 14px; }
+
 @media (max-width: 860px) {
   .frow { grid-template-columns: 1fr; gap: 32px; }
   .frow.reverse .frow-text { order: 1; }
