@@ -415,7 +415,7 @@
 
             <div class="bench-tabs">
               <button class="bench-tab active" data-tab="peers">Peer comparison</button>
-              <button class="bench-tab" data-tab="pathways">Pathways</button>
+              <button class="bench-tab" data-tab="pathways">CRREM</button>
               <button class="bench-tab" data-tab="epc">EPC label</button>
             </div>
 
@@ -478,48 +478,39 @@
               <div class="bench-head">
                 <div>
                   <div class="bench-title">Decarbonisation pathways</div>
-                  <div class="bench-sub">EUI · kWh/m²/yr · lower is better</div>
+                  <div class="bench-sub">CRREM targets vs projected performance · kWh/m²/yr</div>
                 </div>
               </div>
               <div class="yoy-chart-wrap">
                 <svg class="yoy-svg" viewBox="0 0 280 80">
                   <defs>
-                    <linearGradient id="path-gap-grad" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stop-color="#C4813A" stop-opacity=".22"/>
-                      <stop offset="100%" stop-color="#C4813A" stop-opacity=".06"/>
+                    <linearGradient id="path-gap-grad" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stop-color="#C4813A" stop-opacity=".1"/>
+                      <stop offset="100%" stop-color="#C4813A" stop-opacity=".28"/>
                     </linearGradient>
                   </defs>
-                  <!-- Grid lines -->
                   <line x1="0" y1="20" x2="280" y2="20" stroke="#3F472F" stroke-opacity=".06" stroke-dasharray="2 4"/>
                   <line x1="0" y1="40" x2="280" y2="40" stroke="#3F472F" stroke-opacity=".06" stroke-dasharray="2 4"/>
                   <line x1="0" y1="60" x2="280" y2="60" stroke="#3F472F" stroke-opacity=".06" stroke-dasharray="2 4"/>
-                  <!-- Paris Proof target line (far above current performance) -->
-                  <line x1="0" y1="8" x2="280" y2="8" stroke="#829246" stroke-width="1" stroke-dasharray="4 3" stroke-opacity=".4"/>
-                  <text x="276" y="6.5" text-anchor="end" font-size="7.5" fill="#829246" fill-opacity=".6" font-family="sans-serif">Paris Proof 70</text>
-                  <!-- Excess zone fill (building above CRREM = not on track) -->
-                  <path d="M 40 40 C 110 36 170 32 240 28 L 240 63 C 170 65 110 67 40 70 Z" fill="url(#path-gap-grad)"/>
-                  <!-- CRREM target line (lower = the goal) -->
-                  <path d="M 40 40 C 110 36 170 32 240 28" fill="none" stroke="#7096AD" stroke-width="1.8" stroke-dasharray="5 3" stroke-linecap="round"/>
-                  <!-- Building line (higher = not meeting target) -->
-                  <path d="M 40 70 C 110 67 170 65 240 63" fill="none" stroke="#C4813A" stroke-width="2" stroke-linecap="round"/>
+                  <!-- Paris Proof floor -->
+                  <line x1="0" y1="14" x2="280" y2="14" stroke="#829246" stroke-width="1" stroke-dasharray="3 3" stroke-opacity=".38"/>
+                  <text x="275" y="11.5" text-anchor="end" font-size="7" fill="#829246" fill-opacity=".55" font-family="sans-serif">Paris Proof</text>
+                  <!-- Widening excess gap -->
+                  <path d="M 30 43 C 55 18 110 14 250 13 L 250 58 C 190 60 80 65 30 68 Z" fill="url(#path-gap-grad)"/>
+                  <!-- CRREM target — L-curve: steep drop then levels off -->
+                  <path d="M 30 43 C 55 18 110 14 250 13" fill="none" stroke="#7096AD" stroke-width="1.8" stroke-dasharray="5 3" stroke-linecap="round"/>
+                  <!-- Building trajectory — slow decline, not keeping up -->
+                  <path d="M 30 68 C 80 65 190 60 250 58" fill="none" stroke="#C4813A" stroke-width="2" stroke-linecap="round"/>
                   <!-- CRREM dots -->
-                  <circle cx="40"  cy="40" r="2.5" fill="#7096AD"/>
-                  <circle cx="140" cy="34" r="2.5" fill="#7096AD"/>
-                  <circle cx="240" cy="28" r="2.5" fill="#7096AD"/>
+                  <circle cx="30"  cy="43" r="2.5" fill="#7096AD"/>
+                  <circle cx="140" cy="16" r="2.5" fill="#7096AD"/>
+                  <circle cx="250" cy="13" r="2.5" fill="#7096AD"/>
                   <!-- Building dots -->
-                  <circle cx="40"  cy="70" r="3" fill="#C4813A"/>
-                  <circle cx="140" cy="66" r="3" fill="#C4813A"/>
-                  <circle cx="240" cy="63" r="3" fill="#C4813A"/>
-                  <!-- CRREM labels (above dots) -->
-                  <text x="40"  y="35" text-anchor="middle" font-size="8.5" fill="#7096AD" fill-opacity=".8" font-family="sans-serif" font-weight="500">110</text>
-                  <text x="140" y="29" text-anchor="middle" font-size="8.5" fill="#7096AD" fill-opacity=".8" font-family="sans-serif" font-weight="500">102</text>
-                  <text x="240" y="23" text-anchor="middle" font-size="8.5" fill="#7096AD" fill-opacity=".8" font-family="sans-serif" font-weight="500">95</text>
-                  <!-- Building labels (above building dots, inside gap) -->
-                  <text x="40"  y="65" text-anchor="middle" font-size="8.5" fill="#C4813A" fill-opacity=".9" font-family="sans-serif" font-weight="600">148</text>
-                  <text x="140" y="61" text-anchor="middle" font-size="8.5" fill="#C4813A" fill-opacity=".9" font-family="sans-serif" font-weight="600">144</text>
-                  <text x="240" y="58" text-anchor="middle" font-size="8.5" fill="#C4813A" fill-opacity=".9" font-family="sans-serif" font-weight="600">138</text>
+                  <circle cx="30"  cy="68" r="3" fill="#C4813A"/>
+                  <circle cx="140" cy="63" r="3" fill="#C4813A"/>
+                  <circle cx="250" cy="58" r="3" fill="#C4813A"/>
                 </svg>
-                <div class="yoy-axis"><span>2023</span><span>2024</span><span>2025</span></div>
+                <div class="yoy-axis"><span>Now (2025)</span><span>2030</span><span>2035</span></div>
                 <div class="pathway-legend">
                   <span><i style="background:#C4813A"></i>Your building</span>
                   <span><i style="background:#7096AD;opacity:.7;"></i>CRREM target</span>
@@ -527,7 +518,7 @@
               </div>
               <div class="bench-foot" style="color:#C4813A;">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                43 kWh/m² above CRREM — not on track for Paris Proof
+                Gap grows to 83 kWh/m² by 2035 without action
               </div>
             </div>
 
