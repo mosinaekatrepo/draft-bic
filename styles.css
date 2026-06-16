@@ -913,7 +913,6 @@ section { position: relative; }
 }
 /* Scroll carousel wrapper — bleeds to viewport edges */
 .proof-scroll-wrap {
-  cursor: grab;
   position: relative;
   margin-top: clamp(40px, 6vw, 60px);
   width: calc(100% + 2 * var(--gutter));
@@ -952,8 +951,6 @@ section { position: relative; }
   box-shadow: var(--shadow-sm);
   transition: box-shadow .26s ease, transform .26s ease;
 }
-.proof-scroll-wrap.is-dragging { cursor: grabbing; }
-.proof-scroll-wrap.is-dragging .proof-card { pointer-events: none; }
 .proof-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
 .proof-img { overflow: hidden; height: 220px; }
 .proof-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
